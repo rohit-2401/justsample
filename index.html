@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tournament Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        div#tournamentList div {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form id="registerForm">
+        <input type="email" id="username" placeholder="Username (Email)">
+        <input type="password" id="password" placeholder="Password">
+        <button type="button" onclick="registerUser()">Register</button>
+    </form>
+
+    <h1>Google Sign-In</h1>
+    <button type="button" onclick="googleSignIn()">Sign in with Google</button>
+
+    <h1>Tournament Dashboard</h1>
+    <div id="tournamentList">
+        <!-- Tournaments will be listed here -->
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
